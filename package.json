@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test:jest": "jest",
-    "test:playwright": "playwright test",
+    "test:playwright": "start-server-and-test start http://localhost:3000 playwright:test",
+    "playwright:test": "playwright test",
     "test:perf": "node perf/performance.test.js",
     "test:all": "npm run test:jest && npm run test:playwright && npm run test:perf"
   },
@@ -19,6 +20,7 @@
     "@playwright/test": "^1.51.0",
     "autocannon": "^8.0.0",
     "jest": "^29.0.0",
-    "playwright": "^1.51.0"
+    "playwright": "^1.51.0",
+    "start-server-and-test": "^2.0.11"
   }
 }

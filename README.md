@@ -18,8 +18,8 @@ Un projet de **calculatrice web moderne** réalisé avec une stack Full JavaScri
 
 ### Installation locale :
 ```bash
-git clone https://github.com/CorentinSIOdev/calculator-project.git
-cd calculator-project
+git clone https://github.com/CorentinSIOdev/projet-final-qualite-tests.git
+cd projet-final-qualite-tests
 npm install
 ```
 
@@ -57,12 +57,12 @@ npm run test:all
 Dans le terminal, place-toi à la racine du projet puis lance :
 
 ```bash
-docker build -t calculator-project .
+docker build -t projet-final-qualite-tests .
 ```
 
 ### Lancer le conteneur
 ```bash
-docker run -p 3000:3000 calculator-project
+docker run -p 3000:3000 projet-final-qualite-tests
 ```
 
 L'application sera disponible sur :
@@ -72,11 +72,11 @@ L'application sera disponible sur :
 ✔️ Exécuter les tests Jest
 
 ```bash
-docker run calculator-project npm run test:jest
+docker run projet-final-qualite-tests npm run test:jest
 ```
 
 ✔️ Exécuter tous les tests (unitaires, E2E, perf)
 
 ```bash
-docker run calculator-project npm run test:all
+docker run projet-final-qualite-tests npm run test:all
 ```
