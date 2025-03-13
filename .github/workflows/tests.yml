@@ -1,0 +1,31 @@
+name: CI - Tests Automatisés
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Lancer les tests unitaires (Jest)
+        run: npm run test:jest
+
+      - name: Lancer les tests E2E (Playwright)
+        run: |
+          npx playwright install --with-deps
+          npm run test:playwright
